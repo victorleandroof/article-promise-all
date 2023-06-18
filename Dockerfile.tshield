@@ -1,0 +1,11 @@
+FROM ruby:3.2.2-bullseye
+
+WORKDIR /app
+
+COPY Gemfile ./
+COPY Gemfile.lock ./
+
+RUN gem install bundler && bundle install
+
+COPY config ./config
+COPY requests ./requests

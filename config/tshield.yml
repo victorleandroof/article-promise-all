@@ -1,0 +1,13 @@
+request:
+  timeout: 8
+
+domains:
+  localhostUsers:
+    name: 'users'
+    paths:
+      - /users
+  
+  localhostGroups:
+    name: 'groups'
+    paths:
+      - /groups

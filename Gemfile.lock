@@ -1,0 +1,49 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    google-protobuf (3.23.3-x86_64-darwin)
+    googleapis-common-protos-types (1.6.0)
+      google-protobuf (~> 3.14)
+    grpc (1.56.0-x86_64-darwin)
+      google-protobuf (~> 3.23)
+      googleapis-common-protos-types (~> 1.0)
+    grpc-tools (1.56.0)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
+    json (2.6.3)
+    mini_mime (1.1.2)
+    multi_xml (0.6.0)
+    mustermann (2.0.2)
+      ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.9)
+    puma (5.6.5)
+      nio4r (~> 2.0)
+    rack (2.2.7)
+    rack-protection (2.2.4)
+      rack
+    ruby2_keywords (0.0.5)
+    sinatra (2.2.4)
+      mustermann (~> 2.0)
+      rack (~> 2.2)
+      rack-protection (= 2.2.4)
+      tilt (~> 2.0)
+    sinatra-cross_origin (0.4.0)
+    tilt (2.2.0)
+    tshield (0.14.0.0)
+      grpc (~> 1.28, >= 1.28.0)
+      grpc-tools (~> 1.28, >= 1.28.0)
+      httparty (~> 0.14, >= 0.14.0)
+      json (~> 2.0, >= 2.0)
+      puma (>= 4.3.3, < 6.0)
+      sinatra (~> 2.1, >= 2.1.0)
+      sinatra-cross_origin (~> 0.4.0, >= 0.4)
+
+PLATFORMS
+  x86_64-darwin-22
+
+DEPENDENCIES
+  tshield
+
+BUNDLED WITH
+   2.4.14

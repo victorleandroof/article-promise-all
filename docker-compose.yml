@@ -1,0 +1,44 @@
+version: "3"
+networks:
+  services-promises:
+    driver: bridge
+
+services:
+  tshield: 
+    build:
+      context: .
+      dockerfile: Dockerfile.tshield
+    container_name: tshield
+    entrypoint: ['tshield']
+    ports:
+         - 4567:4567
+    expose:
+      - 4567
+    networks:
+      -  services-promises
+  app-without-promises:
+    build: ./
+    container_name: app-without-promises
+    entrypoint: ['npm','start']
+    ports:
+      - 3001:3001
+    environment:
+      - PORT=3001
+      - HOST_TSHIELD=tshield
+    expose:
+      - 3001
+    networks:
+      -  services-promises
+  app-with-promises:
+    build: ./
+    container_name: app-with-promises
+    entrypoint: ['npm','start']
+    ports:
+      - 3002:3002
+    environment:
+      - PORT=3002
+      - HOST_TSHIELD=tshield
+    expose:
+      - 3002
+    networks:
+      -  services-promises
