@@ -36,3 +36,5 @@
 ```bash
   k6 run test.js
 ```
+
+[Article: Desvendando o 'Promise.all': Faça Seu Código Node.js Voar Alto e Rápido](https://victorleandro.com.br/posts/promise_all_nodejs/)
